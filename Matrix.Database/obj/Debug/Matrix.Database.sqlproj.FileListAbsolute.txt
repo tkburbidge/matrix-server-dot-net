@@ -1,0 +1,9 @@
+C:\Matrix\Server\Matrix.Database\bin\Debug\Matrix.Database.dacpac
+C:\Matrix\Server\Matrix.Database\bin\Debug\Matrix.Database.dll
+C:\Matrix\Server\Matrix.Database\bin\Debug\Matrix.Database.pdb
+C:\Matrix\Server\Matrix.Database\obj\Debug\Model.xml
+C:\Matrix\Server\Matrix.Database\obj\Debug\refactor.xml
+C:\Matrix\Server\Matrix.Database\obj\Debug\postdeploy.sql
+C:\Matrix\Server\Matrix.Database\obj\Debug\predeploy.sql
+C:\Matrix\Server\Matrix.Database\obj\Debug\Matrix.Database.dll
+C:\Matrix\Server\Matrix.Database\obj\Debug\Matrix.Database.pdb

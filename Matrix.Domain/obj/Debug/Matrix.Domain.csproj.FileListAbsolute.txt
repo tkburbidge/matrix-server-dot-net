@@ -1,0 +1,5 @@
+C:\Matrix\Server\Matrix.Domain\bin\Debug\Matrix.Domain.dll
+C:\Matrix\Server\Matrix.Domain\bin\Debug\Matrix.Domain.pdb
+C:\Matrix\Server\Matrix.Domain\obj\Debug\Matrix.Domain.csprojResolveAssemblyReference.cache
+C:\Matrix\Server\Matrix.Domain\obj\Debug\Matrix.Domain.dll
+C:\Matrix\Server\Matrix.Domain\obj\Debug\Matrix.Domain.pdb
