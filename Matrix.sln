@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix.Client", "Matrix.Web\Matrix.Client.csproj", "{703145F9-45DB-4A2A-8C87-3CE2FA37FB98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix.Client", "Matrix.Client\Matrix.Client.csproj", "{703145F9-45DB-4A2A-8C87-3CE2FA37FB98}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix.Domain", "Matrix.Domain\Matrix.Domain.csproj", "{BE7D7BF6-E1C3-4985-92D7-6BAD5B99EC2A}"
 EndProject
