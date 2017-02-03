@@ -6,8 +6,8 @@
 	[RoomId]				UNIQUEIDENTIFIER NOT NULL,
 	[Content]				NVARCHAR(MAX)    NOT NULL,
 	[UnrecognizedKeys]		NVARCHAR(MAX)    NULL,
-	[Processed]				BIT				 NOT NULL,
-	[Outlier]				BIT				 NOT NULL,
+	[IsProcessed]			BIT				 NOT NULL,
+	[IsOutlier]				BIT				 NOT NULL,
 	[Depth]					BIGINT           NOT NULL,
     CONSTRAINT [PK_Event] PRIMARY KEY CLUSTERED ([EventId] ASC)
 );

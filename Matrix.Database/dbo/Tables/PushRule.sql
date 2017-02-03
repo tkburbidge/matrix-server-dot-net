@@ -2,7 +2,7 @@
     [PushRuleId]	UNIQUEIDENTIFIER NOT NULL,
     [Username]		NVARCHAR (MAX)   NOT NULL,
 	[RuleId]		UNIQUEIDENTIFIER NOT NULL,
-	[PriorityClass]	SMALLINT		 NOT NULL,
+	[PriorityClass]	INT				 NOT NULL,
 	[Priority]		INT				 NOT NULL,
 	[Conditions]	NVARCHAR(MAX)	 NOT NULL,
 	[Actions]		NVARCHAR(MAX)	 NOT NULL,

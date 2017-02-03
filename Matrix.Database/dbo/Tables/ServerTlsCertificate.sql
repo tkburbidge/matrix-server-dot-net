@@ -3,7 +3,7 @@
     [ServerName]				NVARCHAR (MAX)   NULL,
     [Fingerprint]				NVARCHAR (MAX)   NULL,
     [FromServer]				NVARCHAR (MAX)   NULL,
-	[TsAddedMs]					BIGINT			 NULL,
+	[TimestampAddedMs]			DATETIME		 NOT NULL,
 	[TlsCertificate]			VARBINARY(MAX)	 NULL,
     CONSTRAINT [PK_ServerTlsCertificate] PRIMARY KEY CLUSTERED ([ServerTlsCertificateId] ASC)
 );

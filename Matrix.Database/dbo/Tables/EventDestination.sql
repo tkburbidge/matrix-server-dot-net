@@ -2,7 +2,7 @@
     [EventDestinationId]    UNIQUEIDENTIFIER NOT NULL,
     [EventId]				UNIQUEIDENTIFIER NOT NULL,
 	[DestinationId]			UNIQUEIDENTIFIER NOT NULL,
-	[DeliveredTs]			BIGINT           NULL,
+	[DeliveredTimestamp]	DATETIME         NULL,
     CONSTRAINT [PK_EventDestination] PRIMARY KEY CLUSTERED ([EventDestinationId] ASC)
 );
 

@@ -8,12 +8,12 @@
 	[AppDisplayName]	NVARCHAR(64)	 NOT NULL,
 	[DeviceDisplayName]	NVARCHAR(128)	 NOT NULL,
 	[Pushkey]			VARBINARY(MAX)	 NOT NULL,
-	[Ts]				BIGINT			 NOT NULL,
+	[Timestamp]			DATETIME		 NOT NULL,
 	[Lang]				NVARCHAR(8)		 NULL,
 	[Data]				VARBINARY(MAX)	 NULL,
 	[LastToken]			NVARCHAR(MAX)	 NULL,
-	[LastSuccess]		BIGINT			 NULL,
-	[FailingSince]		BIGINT			 NULL,
+	[LastSuccess]		DATETIME		 NULL,
+	[FailingSince]		DATETIME		 NULL,
     CONSTRAINT [PK_Pusher] PRIMARY KEY CLUSTERED ([PusherId] ASC)
 );
 

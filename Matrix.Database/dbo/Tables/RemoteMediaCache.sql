@@ -3,7 +3,7 @@
     [MediaOrigin]			NVARCHAR (MAX)   NULL,
     [MediaId]				UNIQUEIDENTIFIER NULL,
     [MediaType]				NVARCHAR (MAX)   NULL,
-	[CreatedTs]				BIGINT			 NULL,
+	[CreatedTimestamp]		DATETIME		 NOT NULL,
 	[UploadName]			NVARCHAR (MAX)   NULL,
 	[MediaLength]			INT				 NULL,
 	[FilesystemId]			UNIQUEIDENTIFIER NULL,

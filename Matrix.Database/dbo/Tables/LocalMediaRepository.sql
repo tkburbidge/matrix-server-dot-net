@@ -3,7 +3,7 @@
     [MediaId]					UNIQUEIDENTIFIER NULL,
     [MediaType]					NVARCHAR (MAX)   NULL,
     [MediaLength]				INT				 NULL,
-	[CreatedTs]					BIGINT			 NULL,
+	[CreatedTimestamp]			DATETIME		 NULL,
 	[UploadName]				NVARCHAR (MAX)   NULL,
 	[UserId]					UNIQUEIDENTIFIER NULL,
     CONSTRAINT [PK_LocalMediaRepository] PRIMARY KEY CLUSTERED ([LocalMediaRepositoryId] ASC)

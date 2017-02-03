@@ -2,8 +2,8 @@
     [PresenceId]	UNIQUEIDENTIFIER NOT NULL,
     [UserId]		UNIQUEIDENTIFIER NOT NULL,
     [State]			NVARCHAR (20)    NULL,
-	[StatusMsg]		nvarchar(max)	 NULL,
-	[Mtime]			BIGINT			 NULL,
+	[StatusMsg]		NVARCHAR(max)	 NULL,
+	[Mtime]			DATETIME		 NULL,
     CONSTRAINT [PK_Presence] PRIMARY KEY CLUSTERED ([PresenceId] ASC)
 );
 

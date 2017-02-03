@@ -1,8 +1,8 @@
 ﻿CREATE TABLE [dbo].[ReceivedTransaction] (
     [ReceivedTransactionId]	UNIQUEIDENTIFIER NOT NULL,
-    [TransactionId]			UNIQUEIDENTIFIER NULL,
+    [TransactionId]			UNIQUEIDENTIFIER NOT NULL,
     [Origin]				NVARCHAR (MAX)   NULL,
-	[Ts]					BIGINT			 NULL,
+	[Timestamp]				DATETIME		 NOT NULL,
 	[ResponseCode]			INT				 NULL,
 	[ResponseJson]			VARBINARY(MAX)	 NULL,
 	[HasBeenReferenced]		BIT				 NOT NULL,
