@@ -10,5 +10,6 @@ namespace Matrix.Services.Interfaces
     public interface IUserService
     {
         User RegisterUser(string username, string password);
+        User Login(string usernameOrId, string password);
     }
 }

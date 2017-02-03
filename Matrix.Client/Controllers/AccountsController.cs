@@ -4,6 +4,7 @@ using System.Web.Http;
 using Matrix.Services.DependencyInjection;
 using Matrix.Common.Errors;
 using Matrix.Common;
+using System.Net;
 
 namespace Matrix.Client.Controllers
 {
@@ -26,7 +27,12 @@ namespace Matrix.Client.Controllers
             var user = this.serviceFactory.UserService.RegisterUser(model.Username, model.Password);
             this.unitOfWork.Commit();
 
-            var response = new RegisterResponse();
+            var response = new RegisterResponse()
+            {
+                AccessToken = user.UserId.ToString(),
+                UserId = $"@{user.Username}:chat.myresman.com",
+                HomeServer = "chat.myresman.com",
+            };
 
             return response;
         }
@@ -35,7 +41,19 @@ namespace Matrix.Client.Controllers
         [Route("login")]
         public LoginResponse Login(LoginRequest model)
         {
-            var response = new LoginResponse();
+            if(model.Type != "m.login.password")
+            {
+                throw new MatrixException("M_UNKNOWN", "Bad login type", HttpStatusCode.BadRequest);
+            }
+
+            var user = this.serviceFactory.UserService.Login(model.User, model.Password);
+
+            var response = new LoginResponse()
+            {
+                AccessToken = user.UserId.ToString(),
+                UserId = $"@{user.Username}:chat.myresman.com",
+                HomeServer = "chat.myresman.com",
+            };
 
             return response;
         }

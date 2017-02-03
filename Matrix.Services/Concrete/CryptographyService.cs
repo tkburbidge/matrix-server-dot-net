@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Matrix.Domain.DependencyInjection;
-using Sodium;
 
 namespace Matrix.Services.Concrete
 {
@@ -13,12 +12,12 @@ namespace Matrix.Services.Concrete
     {
         public string HashPassword(string password)
         {
-            return PasswordHash.ArgonHashString(password);
+            return BCrypt.Net.BCrypt.HashPassword(password);
         }
 
         public bool CheckPassword(string hashedPassword, string password)
         {
-            return PasswordHash.ArgonHashStringVerify(hashedPassword, password);
+            return BCrypt.Net.BCrypt.Verify(password, hashedPassword);
         }
     }
 }

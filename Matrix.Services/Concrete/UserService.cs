@@ -9,6 +9,7 @@ using Matrix.Domain.Models.Database;
 using Matrix.Common.Errors;
 using System.Security.Cryptography;
 using Matrix.Services.DependencyInjection;
+using Matrix.Common.Utilities;
 
 namespace Matrix.Services.Concrete
 {
@@ -44,5 +45,24 @@ namespace Matrix.Services.Concrete
                     where u.Username == username
                     select u).Any();
         }
+
+        public User Login(string usernameOrId, string password)
+        {
+            MatrixId userId = new MatrixId(usernameOrId, "chat.myresman.com");
+
+            var user = (from u in this.repositoryFactory.UserRepository.FindAll()
+                        where u.Username == userId.Username
+                        select u).FirstOrDefault();
+
+
+            if (user == null ||
+                this.serviceFactory.CryptographyService.CheckPassword(user.PasswordHash, password) == false)
+            {
+                throw MatrixException.Forbidden;
+            }
+
+            return user;
+        }
+
     }
 }
