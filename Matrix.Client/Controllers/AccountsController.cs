@@ -36,7 +36,6 @@ namespace Matrix.Client.Controllers
         public TokenRefreshResponse TokenRefresh(TokenRefreshRequest model)
         {
             var response = new TokenRefreshResponse();
-
             return response;
         }
         

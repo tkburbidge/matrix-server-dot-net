@@ -1,5 +1,0 @@
-C:\Matrix\Server\Matrix.Common\bin\Debug\Matrix.Common.dll
-C:\Matrix\Server\Matrix.Common\bin\Debug\Matrix.Common.pdb
-C:\Matrix\Server\Matrix.Common\obj\Debug\Matrix.Common.csprojResolveAssemblyReference.cache
-C:\Matrix\Server\Matrix.Common\obj\Debug\Matrix.Common.dll
-C:\Matrix\Server\Matrix.Common\obj\Debug\Matrix.Common.pdb
