@@ -1,0 +1,289 @@
+﻿body{
+	margin: 0px;
+	height: 954px;
+}
+h1, h2, h3, h4, h5, h6, a{
+	font-family: "Whitney A";
+}
+h1, h2, h3, h4, h5{
+	letter-spacing: .5;
+}
+h2, h3, h4, h5, h6, #ChannelsListList,
+#RoomsListList, .divider{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+h1, h3, h5{
+	color: white;
+}
+h1{
+	margin: 0px;
+	font-size: 36px;
+	font-weight: 900;
+	height: 36px;
+	line-height: 36px;
+	text-size-adjust: 100%;
+}
+h2{
+	font-size: 20px;
+    position: relative;
+    top: -2px;
+}
+h3{
+	font-size: 16px;
+}
+h4{
+    font-size: 14px;
+}
+h5{
+    font-size: 14px;
+}
+h6{
+    float: left;
+    font-size: 16px;
+    font-weight: normal;
+}
+li{
+    padding-top: 4px;
+    line-height: 16px;
+    padding-bottom: 4px;
+}
+a{
+	text-decoration: none;
+	color: gray;
+}
+#Left, #Right, #PropertyName, #ExpandIcon, #ChannelsLabel, #RoomsLabel, 
+#ChannelStar, #ChannelPerson, #AddTopic, .divider, #ChannelMembers, 
+#ChannelMemberCount, .message-left, .message-right{
+	float: left;
+}
+.status-icon, .channel-name, #UserName, .room-name, #ChannelNameLock,
+#ChannelNameName, #ChannelRight, #Search, #ChannelSettings{
+	display: inline-block;
+}
+#Left{
+	width: 220px;
+	background-color: #09A9E3;
+	padding: 10px 10px 10px 0px;
+	height: 104%;
+}
+#Right{
+	padding: 10px;
+	width: 900px;
+}
+#ExpandIcon{
+	height: 15px;
+	margin-top: 20px;
+	margin-left: 5px;
+}
+#NotificationIcon{
+	width: 30px;
+	float: right;
+}
+#Self{
+	padding-left: 10px;
+	height: 45px;
+}
+.channel-name{
+	position: relative;
+	top: -2px;
+}
+.channel{
+	padding-left: 10px;
+}
+#UserName{
+	color: white;
+	font-size: 16px;
+	position: relative;
+	top: -4px;
+	left: 5px;
+}
+#Channels{
+	margin-top: 20px;
+}
+#ChannelsLabel{
+	color: white;
+	font-size: 16px;
+}
+#ChannelsHeader{
+	height: 30px;
+	padding-left: 10px;
+}
+#RoomsHeader{
+	height: 30px;
+	padding-left: 10px;
+}
+#ChannelsListList{
+	list-style: none;
+	padding-left: 0px;
+}
+#RoomsListList{
+	list-style: none;
+	padding-left: 0px;
+}
+.add-icon{
+	width: 20px;
+	float: right;
+}
+#RoomsLabel{
+	color: white;
+	font-size: 16px;
+}
+.room-name{
+	position: relative;
+	top: -5px;
+}
+#Rooms{
+	margin-top: 20px;
+}
+#ChannelHeader{
+    border-bottom: solid lightgray 1px;
+    height: 50px;
+}
+.lock-icon{
+	width: 18px;
+}
+.selected-channel{
+	background-color: rgb(132, 178, 49);
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+#UserStatus{
+	padding-left: 10px;
+}
+.room{
+	padding-left: 10px;
+}
+#ChannelFavorite{
+	width: 18px;
+}
+.divider{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: gray;
+}
+#ChannelMembers{
+    width: 22px;
+    margin-right: 5px;
+    position: relative;
+    top: -1px;
+}
+#ChannelRight{
+    float: right;
+    border-left: solid lightgray 1px;
+    padding-left: 10px;
+    position: absolute;
+    right: 50px;
+    width: 1000px;
+    top: 12px;
+    height: 40px;
+}
+#ChannelSettingsIcon{
+	width: 22px;
+}
+#ChannelDetailsIcon{
+	width: 22px;
+}
+#ChannelSettings{
+	margin-top: 10px;
+}
+#SearchInput{
+    height: 25px;
+    position: relative;
+    top: -6px;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border: solid gray 2px;
+    background-image: url(search.png);
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position-y: 2px;
+    background-position-x: 4px;
+}
+#MessagesList{
+	list-style: none;
+	padding-left: 2px;
+}
+.user-icon{
+	width: 45px;
+}
+.message-right{
+	width: 400px;
+	margin-left: 10px;
+}
+.message-username{
+	margin-right: 10px;
+}
+.message-timestamp{
+	color: gray;
+}
+.message-container{
+	height: 100px;
+}
+.message-content{
+	color: gray;
+	margin-top: 5px;
+}
+#Messenger{
+	border: solid lightgray 2px;
+    border-radius: 10px;
+    height: 40px;
+    position: relative;
+    width: 900px;
+}
+#MessengerPlus{
+	font-size: 35px;
+    color: gray;
+    position: absolute;
+    top: -2px;
+    left: 11px;
+}
+#PlusSection{
+	border-right: solid lightgray 2px;
+    height: 42px;
+    width: 42px;
+}
+#NewMessageContent{
+	position: absolute;
+    top: 0px;
+    left: 44px;
+    height: 38px;
+    width: 830px;
+    padding-left: 10px;
+    border: none;
+}
+#EmojiIcon{
+	height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.message{
+	height: 50px;
+}
+#ChannelAlert{
+    background-color: rgb(132, 178, 49);
+    height: 20px;
+    display: block;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    position: relative;
+}
+.channel-alert-message{
+	position: absolute;
+    top: 6px;
+    left: 335px;
+}
+.channel-close{
+	position: absolute;
+	top: 6px;
+    left: 780px;
+}
+.channel-x{
+	position: absolute;
+	top: 6px;
+	left: 880px;
+}

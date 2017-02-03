@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>ResMan Chat Client</title>
+	<meta charset="utf-8" />
+    <!--<link rel="stylesheet" href="../Content/bootstrap.css" />-->
+    <link rel="stylesheet" href="../Content/fonts.css" />
+    <link rel="stylesheet" href="../Content/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="Left">
+        <div id="Self">
+            <div id="SelfHeader">
+                <div id="Property">
+                    <h1 id="PropertyName">ResMan</h1>
+                    <img src="../Content/images/Expand.svg" alt="expand icon" id="ExpandIcon" />
+                </div>
+                <div id="Notifications">
+                    <img src="../Content/images/bell.png" alt="notification icon" id="NotificationIcon" />
+                </div>
+            </div>
+        </div>
+        <div id="UserStatus">
+            <svg height="20" width="20" class="status-icon">
+                <circle cx="10" cy="10" r="8" fill="rgb(132, 178, 49)" stroke="white" stroke-width="2" />
+            </svg>
+            <h3 class="left-text" id="UserName">Mike Root</h2>
+        </div>
+        <div id="Channels">
+            <div id="ChannelsHeader">
+                <h2 id="ChannelsLabel">CHANNELS (4)</h2>
+                <img src="../Content/images/plus.png" alt="add icon" class="add-icon" id="ChannelsAdd" />
+            </div>
+            <div id="ChannelsList">
+                <ul id="ChannelsListList">
+                    <li class="channel-item">
+                        <div class="channel">
+                            <img src="../Content/images/lock.png" alt="Lock Icon" class="lock-icon" />
+                            <h3 class="channel-name">Affordable Devs</h3>
+                        </div>
+                    </li>
+                    <li class="selected-channel channel-item">
+                        <div class="channel">
+                            <img src="../Content/images/lock.png" alt="Lock Icon" class="lock-icon" />
+                            <h3 class="channel-name">Company</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="Rooms">
+            <div id="RoomsHeader">
+                <h2 id="RoomsLabel">DIRECT MESSAGES</h2>
+                <img src="../Content/images/plus.png" alt="add icon" class="add-icon" id="RoomsAdd" />
+            </div>
+            <div id="RoomsList">
+                <ul id="RoomsListList">
+                    <li class="room-item">
+                        <div class="room">
+                            <svg height="20" width="20" class="status-icon">
+                                <circle cx="10" cy="10" r="8" fill="rgb(132, 178, 49)" stroke="white" stroke-width="2" />
+                            </svg>
+                            <h3 class="room-name">Craig Perkins</h3>
+                        </div>
+                    </li>
+                    <li class="room-item">
+                        <div class="room">
+                            <svg height="20" width="20" class="status-icon">
+                                <circle cx="10" cy="10" r="8" fill="rgb(132, 178, 49)" stroke="white" stroke-width="2" />
+                            </svg>
+                            <h3 class="room-name">Trevor Burbidge</h3>
+                        </div>
+                    </li>
+                    <li class="room-item">
+                        <div class="room">
+                            <svg height="20" width="20" class="status-icon">
+                                <circle cx="10" cy="10" r="8" fill="none" stroke="white" stroke-width="2" />
+                            </svg>
+                            <h3 class="room-name">Thomas Hutchins</h3>
+                        </div>
+                    </li>
+                    <li class="room-item">
+                        <div class="room">
+                            <svg height="20" width="20" class="status-icon">
+                                <circle cx="10" cy="10" r="8" fill="none" stroke="white" stroke-width="2" />
+                            </svg>
+                            <h3 class="room-name">Tony Morgan</h3>
+                        </div>
+                    </li>
+                    <li class="room-item">
+                        <div class="room">
+                            <svg height="20" width="20" class="status-icon">
+                                <circle cx="10" cy="10" r="8" fill="rgb(132, 178, 49)" stroke="white" stroke-width="2" />
+                            </svg>
+                            <h3 class="room-name">Jordan Betteridge</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="Right">
+        <div id="ChannelHeader">
+            <div id="ChannelName">
+                <img src="../Content/images/lock2.png" alt="Lock Icon" class="lock-icon" id="ChannelNameLock" />
+                <h2 id="ChannelNameName">Company</h2>
+            </div>
+            <div id="ChannelDesc">
+                <a href="#" id="ChannelStar">
+                    <img src="../Content/images/star.png" alt="star icon" id="ChannelFavorite" />
+                </a>
+                <h4 class="divider">|</h4>
+                <a href="#" id="ChannelPerson">
+                    <img src="../Content/images/person.png" alt="person icon" id="ChannelMembers" />
+                    <h4 id="ChannelMemberCount">3</h4>
+                </a>
+                <h4 class="divider">|</h4>
+                <a href="#" id="AddTopic"><h4>Add a topic</h4></a>
+            </div>
+            <div id="ChannelRight">
+                <div id="ChannelSettings">
+                    <a href="#" id="ChannelSettingsIconLink">
+                        <img src="../Content/images/settings2.png" alt="settings icon" id="ChannelSettingsIcon" />
+                    </a>
+                    <a href="#">
+                        <img src="../Content/images/details.png" alt="channel details" id="ChannelDetailsIcon" />
+                    </a>
+                </div>
+                <div id="Search">
+                    <input type="text" id="SearchInput" />
+                </div>
+            </div>
+        </div>
+        <div id="ChannelBody">
+            <div id="ChannelAlert">
+                <h5 class="channel-alert-message">4 new messages since 1:56 PM</h5>
+                <h5 class="channel-close">Mark as read</h5>
+                <h5 class="channel-x">X</h5>
+            </div>
+            <div id="Messages">
+                <ul id="MessagesList">
+                    <li class="message">
+                        <div class="message-container">
+                            <div class="message-left">
+                                <img src="../Content/images/vaultboy.jpg" alt="craig icon" class="user-icon" />
+                            </div>
+                            <div class="message-right">
+                                <h6 class="message-username">Craig Perkins</h6>
+                                <h4 class="message-timestamp">1:52 PM</h4>
+                                <h6 class="message-content">Hey Trevor, I'm so glad Mike is on our team!</h6>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="message">
+                        <div class="message-container">
+                            <div class="message-left">
+                                <img src="../Content/images/ironman.jpg" alt="trevor icon" class="user-icon" />
+                            </div>
+                            <div class="message-right">
+                                <h6 class="message-username">Trevor Burbidge</h6>
+                                <h4 class="message-timestamp">1:54 PM</h4>
+                                <h6 class="message-content">Yeah he's really the best and he's so darn good looking!</h6>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="message">
+                        <div class="message-container">
+                            <div class="message-left">
+                                <img src="../Content/images/vaultboy.jpg" alt="trevor icon" class="user-icon" />
+                            </div>
+                            <div class="message-right">
+                                <h6 class="message-username">Craig Perkins</h6>
+                                <h4 class="message-timestamp">1:56 PM</h4>
+                                <h6 class="message-content">Whoa dude you're making this really weird now...</h6>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="message">
+                        <div class="message-container">
+                            <div class="message-left">
+                                <img src="../Content/images/ironman.jpg" alt="trevor icon" class="user-icon" />
+                            </div>
+                            <div class="message-right">
+                                <h6 class="message-username">Trevor Burbidge</h6>
+                                <h4 class="message-timestamp">1:58 PM</h4>
+                                <h6 class="message-content">Sorry</h6>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="Messenger">
+            <div id="PlusSection">
+                <h4 id="MessengerPlus">+</h4>
+            </div>
+            <div id="NewMessage">
+                <input type="text" id="NewMessageContent" placeholder="Message Company" />
+            </div>
+            <div id="EmojiSection">
+                <a href="#">
+                    <img src="../Content/images/emoticons.png" alt="emoji icon" id="EmojiIcon" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("#PropertyName", "#ExpandIcon", "UserStatus").function(){
+
+		alert("Open Self Dialog");
+
+	});
+
+	$("#Notifications").function(){
+
+		alert("Open Notifications Dialog");
+
+	});
+
+	$("#ChannelsLabel", "#ChannelsAdd").function(){
+
+		alert("Open Browse Channels Dialog");
+
+	});
+
+	$(".channel-item", ".room-item").function(){
+
+		alert("Change Channel");
+
+	});
+
+	$("#RoomsLabel", "#RoomsAdd").function(){
+
+		alert("Open Browse Rooms Dialog");
+
+	});
+
+	$("#ChannelName", "#ChannelSettingsIconLink").function(){
+
+			alert("Open Channel Options Dialog");
+
+	});
+
+	$("#ChannelStar").function(){
+
+			alert("Star Channel");
+
+	});
+
+	$("#ChannelPerson").function(){
+
+		alert("Open Member List View");
+
+	});
+
+	$("#AddTopic").function(){
+
+		alert("Add Topic");
+
+	});
+
+});
+</script>
+
+</body>
+</html>
