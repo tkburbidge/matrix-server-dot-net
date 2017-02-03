@@ -9,6 +9,20 @@ namespace Matrix.Client.Controllers
     public class AccountsController : BaseController
     {
         [HttpPost]
+        [Route("register")]
+        public RegisterResponse Register(RegisterRequest model, AccountKind kind = AccountKind.User)
+        {
+            if (kind == AccountKind.Guest && !MatrixConfig.AllowGuestAccounts)
+            {
+                throw MatrixException.GuestAccountsNotAllowed;
+            }
+
+            var response = new RegisterResponse();
+
+            return response;
+        }
+
+        [HttpPost]
         [Route("login")]
         public LoginResponse Login(LoginRequest model)
         {
@@ -18,15 +32,10 @@ namespace Matrix.Client.Controllers
         }
 
         [HttpPost]
-        [Route("register")]
-        public RegisterResponse Register(RegisterRequest model, AccountKind kind = AccountKind.User)
+        [Route("tokenrefresh")]
+        public TokenRefreshResponse TokenRefresh(TokenRefreshRequest model)
         {
-            if(kind == AccountKind.Guest && !MatrixConfig.AllowGuestAccounts)
-            {
-                throw MatrixException.GuestAccountsNotAllowed;
-            }
-
-            var response = new RegisterResponse();
+            var response = new TokenRefreshResponse();
 
             return response;
         }
