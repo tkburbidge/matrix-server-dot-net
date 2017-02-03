@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[UserFilter] (
+    [UserFilterId]	UNIQUEIDENTIFIER NOT NULL,
+    [UserId]		UNIQUEIDENTIFIER NULL,
+    [FilterId]		UNIQUEIDENTIFIER NULL,
+    [FilterJson]	VARBINARY (MAX)  NOT NULL,
+    CONSTRAINT [PK_UserFilter] PRIMARY KEY CLUSTERED ([UserFilterId] ASC)
+);
+

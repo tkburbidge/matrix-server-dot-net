@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[RoomHost] (
+    [RoomHostId]	UNIQUEIDENTIFIER NOT NULL,
+    [RoomId]		UNIQUEIDENTIFIER NOT NULL,
+	[Host]			NVARCHAR(MAX)	 NOT NULL,
+    CONSTRAINT [PK_RoomHost] PRIMARY KEY CLUSTERED ([RoomHostId] ASC)
+);
+

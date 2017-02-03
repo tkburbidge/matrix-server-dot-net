@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Profile] (
+    [ProfileId]		UNIQUEIDENTIFIER NOT NULL,
+    [UserId]		UNIQUEIDENTIFIER NOT NULL,
+	[DisplayName]	NVARCHAR(MAX)	 NULL,
+	[AvatarUrl]		NVARCHAR(MAX)	 NULL,
+    CONSTRAINT [PK_Profile] PRIMARY KEY CLUSTERED ([ProfileId] ASC)
+);
+

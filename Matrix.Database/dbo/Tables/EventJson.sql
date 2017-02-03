@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[EventJson] (
+    [EventJsonId]		UNIQUEIDENTIFIER NOT NULL,
+    [EventId]			UNIQUEIDENTIFIER NOT NULL,
+    [RoomId]			UNIQUEIDENTIFIER NOT NULL,
+	[InternalMetadata]	NVARCHAR(MAX)	 NOT NULL,
+	[Json]				NVARCHAR(MAX)	 NOT NULL,
+    CONSTRAINT [PK_EventJson] PRIMARY KEY CLUSTERED ([EventJsonId] ASC)
+);
+

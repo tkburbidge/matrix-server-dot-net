@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[RoomAlias] (
+    [RoomAliasId]		UNIQUEIDENTIFIER NOT NULL,
+    [RoomAlias]			NVARCHAR (MAX)   NOT NULL,
+    [RoomId]			UNIQUEIDENTIFIER NOT NULL,
+    CONSTRAINT [PK_RoomAlias] PRIMARY KEY CLUSTERED ([RoomAliasId] ASC)
+);
+

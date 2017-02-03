@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[StateGroupState] (
+    [StateGroupStateId]	UNIQUEIDENTIFIER NOT NULL,
+    [StateGroupId]		UNIQUEIDENTIFIER NOT NULL,
+    [RoomId]			UNIQUEIDENTIFIER NOT NULL,
+	[Type]				NVARCHAR(MAX)	 NOT NULL,
+	[StateKey]			NVARCHAR(MAX)	 NOT NULL,
+    [EventId]			UNIQUEIDENTIFIER NOT NULL,
+    CONSTRAINT [PK_StateGroupState] PRIMARY KEY CLUSTERED ([StateGroupStateId] ASC)
+);
+
