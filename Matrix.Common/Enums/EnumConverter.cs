@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Web;
 
-namespace Matrix.Client.Models
+namespace Matrix.Common.Enums
 {
     public class EnumConverter<T> : TypeConverter
     {

@@ -17,6 +17,7 @@ namespace Matrix.Services.DependencyInjection
         }
 
         public ICryptographyService CryptographyService { get { return (ICryptographyService)this.serviceProvider.GetService(typeof(ICryptographyService)); } }
+        public IRoomService RoomService { get { return (IRoomService)this.serviceProvider.GetService(typeof(IRoomService)); } }
         public IUserService UserService { get { return (IUserService)this.serviceProvider.GetService(typeof(IUserService)); } }
     }
 }

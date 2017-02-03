@@ -7,13 +7,6 @@ using System.Web;
 
 namespace Matrix.Client.Models.Access
 {
-    [TypeConverter(typeof(EnumConverter<AccountKind>))]
-    public enum AccountKind
-    {
-        Guest,
-        User
-    }
-
     public class RegisterRequest
     {
         public string Username { get; set; }

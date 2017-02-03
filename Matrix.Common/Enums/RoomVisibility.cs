@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Matrix.Common.Enums
+{
+    [TypeConverter(typeof(EnumConverter<RoomVisibility>))]
+    public enum RoomVisibility
+    {
+        Public,
+        Private
+    }
+}

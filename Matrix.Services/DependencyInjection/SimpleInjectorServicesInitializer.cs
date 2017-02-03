@@ -16,6 +16,7 @@ namespace Matrix.Services.DependencyInjection
             container.Register(() => new ServiceFactory(container));
 
             container.Register<ICryptographyService, CryptographyService>();
+            container.Register<IRoomService, RoomService>();
             container.Register<IUserService, UserService>();
         }
     }

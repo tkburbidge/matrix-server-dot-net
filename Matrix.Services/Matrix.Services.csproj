@@ -51,10 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Concrete\CryptographyService.cs" />
+    <Compile Include="Concrete\RoomService.cs" />
     <Compile Include="Concrete\Service.cs" />
     <Compile Include="Concrete\UserService.cs" />
     <Compile Include="DependencyInjection\SimpleInjectorServicesInitializer.cs" />
     <Compile Include="Interfaces\ICryptographyService.cs" />
+    <Compile Include="Interfaces\IRoomService.cs" />
     <Compile Include="Interfaces\IUserService.cs" />
     <Compile Include="Models\UserDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

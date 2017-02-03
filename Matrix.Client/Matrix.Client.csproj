@@ -171,8 +171,8 @@
     <Compile Include="Models\Access\LoginRequest.cs" />
     <Compile Include="Models\Access\RegisterRequest.cs" />
     <Compile Include="Models\Access\TokenRefreshRequest.cs" />
-    <Compile Include="Models\Base\VersionsResponse.cs" />
-    <Compile Include="Models\EnumConverter.cs" />
+    <Compile Include="Models\Rooms\CreateRoomRequest.cs" />
+    <Compile Include="Models\Server\VersionsResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

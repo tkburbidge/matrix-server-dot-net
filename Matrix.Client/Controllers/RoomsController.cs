@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Web.Http;
 using Matrix.Services.DependencyInjection;
 using Matrix.Common;
+using Matrix.Client.Models.Rooms;
 
 namespace Matrix.Client.Controllers
 {
@@ -19,9 +20,9 @@ namespace Matrix.Client.Controllers
 
         [HttpPost]
         [Route("createRoom")]
-        public IHttpActionResult CreateRoom()
+        public CreateRoomResponse CreateRoom(CreateRoomRequest model)
         {
-            return Ok();
+            this.serviceFactory.RoomService.CreateRoom()
         }
     }
 }
