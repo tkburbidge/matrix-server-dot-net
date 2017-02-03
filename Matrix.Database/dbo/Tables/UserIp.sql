@@ -2,7 +2,7 @@
     [UserIpId]     	UNIQUEIDENTIFIER NOT NULL,
     [UserId]      	UNIQUEIDENTIFIER NOT NULL,
     [AccessTokenId] UNIQUEIDENTIFIER NOT NULL,
-    [DeviceId]     	NVARCHAR (MAX)   NULL,
+    [DeviceId]     	UNIQUEIDENTIFIER NULL,
     [Ip]     		NVARCHAR (MAX)   NOT NULL,
     [UserAgent]     NVARCHAR (MAX)   NOT NULL,
     [LastSeen]  	BIGINT         	 NOT NULL,

@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[RoomMembership] (
+    [RoomMembershipId]	UNIQUEIDENTIFIER NOT NULL,
+	[EventId]			UNIQUEIDENTIFIER NOT NULL,
+	[UserId]			UNIQUEIDENTIFIER NOT NULL,
+	[Sender]			NVARCHAR(MAX)	 NOT NULL,
+	[RoomId]			UNIQUEIDENTIFIER NOT NULL,
+	[Membership]		NVARCHAR(MAX)	 NOT NULL,
+    CONSTRAINT [PK_RoomMembership] PRIMARY KEY CLUSTERED ([RoomMembershipId] ASC)
+);
+
