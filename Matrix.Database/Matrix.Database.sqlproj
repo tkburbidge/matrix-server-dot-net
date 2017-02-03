@@ -64,5 +64,14 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\User.sql" />
+    <Build Include="dbo\Tables\AccessToken.sql" />
+    <Build Include="dbo\Tables\ApplicationService.sql" />
+    <Build Include="dbo\Tables\ApplicationServiceRegex.sql" />
+    <Build Include="dbo\Tables\ApplicationServiceState.sql" />
+    <Build Include="dbo\Tables\ApplicationServiceTransaction.sql" />
+    <Build Include="dbo\Tables\EventBackwardExtremity.sql" />
+    <Build Include="dbo\Tables\EventEdge.sql" />
+    <Build Include="dbo\Tables\EventForwardExtremity.sql" />
+    <Build Include="dbo\Tables\UserIp.sql" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[EventEdge] (
+    [EventEdgeId]		UNIQUEIDENTIFIER NOT NULL,
+    [EventId]			UNIQUEIDENTIFIER NOT NULL,
+    [PreviousEventId]	UNIQUEIDENTIFIER NOT NULL,
+    [RoomId]			UNIQUEIDENTIFIER NOT NULL,
+    [IsState]			BIT 			 NOT NULL,
+    CONSTRAINT [PK_EventEdge] PRIMARY KEY CLUSTERED ([EventEdgeId] ASC)
+);
+
