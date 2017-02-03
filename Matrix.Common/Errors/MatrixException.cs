@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Matrix.Client.Errors
+namespace Matrix.Common.Errors
 {
     public class MatrixException : Exception
     {
@@ -21,7 +21,8 @@ namespace Matrix.Client.Errors
 
         //Errors
         public static MatrixException GuestAccountsNotAllowed = new MatrixException("GUEST_ACCOUNTS_NOT_ALLOWED", "Guest accounts are not allowed by this server");
-
+        public static MatrixException UserInUse = new MatrixException("M_USER_IN_USE", "The requested username has already been taken");
+        public static MatrixException InvalidUsername = new MatrixException("M_INVALID_USERNAME", "The requested username is not valid");
     }
 
         public class MatrixError

@@ -1,4 +1,4 @@
-﻿using Matrix.Client.Errors;
+﻿using Matrix.Common.Errors;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http.Filters;

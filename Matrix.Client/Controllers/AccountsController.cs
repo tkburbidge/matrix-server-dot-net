@@ -1,13 +1,19 @@
 ﻿using Matrix.Client.App_Start;
-using Matrix.Client.Errors;
 using Matrix.Client.Models.Access;
 using System.Web.Http;
+using Matrix.Services.DependencyInjection;
+using Matrix.Common.Errors;
+using Matrix.Common;
 
 namespace Matrix.Client.Controllers
 {
     [RoutePrefix(ApiRouteConfig.RoutePrefix)]
     public class AccountsController : BaseController
     {
+        public AccountsController(ServiceFactory serviceFactory, IUnitOfWork unitOfWork) : base(serviceFactory, unitOfWork)
+        {
+        }
+
         [HttpPost]
         [Route("register")]
         public RegisterResponse Register(RegisterRequest model, AccountKind kind = AccountKind.User)
@@ -16,6 +22,9 @@ namespace Matrix.Client.Controllers
             {
                 throw MatrixException.GuestAccountsNotAllowed;
             }
+
+            var user = this.serviceFactory.UserService.RegisterUser(model.Username, model.Password);
+            this.unitOfWork.Commit();
 
             var response = new RegisterResponse();
 
