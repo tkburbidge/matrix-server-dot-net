@@ -8,6 +8,8 @@ namespace Matrix.Client.App_Start
 {
     public class ApiRouteConfig
     {
+        public const string RoutePrefix = "_matrix/client/r0";
+
         public static void RegisterRoutes(HttpConfiguration config)
         {
             // Web API routes

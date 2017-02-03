@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Matrix.Client.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,7 +8,7 @@ using System.Web.Http;
 
 namespace Matrix.Client.Controllers
 {
-    [RoutePrefix("_matrix/client/r0")]
+    [RoutePrefix(ApiRouteConfig.RoutePrefix)]
     public class RoomsController : BaseController
     {
         [HttpPost]

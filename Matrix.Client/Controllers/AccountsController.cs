@@ -5,7 +5,7 @@ using System.Web.Http;
 
 namespace Matrix.Client.Controllers
 {
-    [RoutePrefix("_matrix/client/r0")]
+    [RoutePrefix(ApiRouteConfig.RoutePrefix)]
     public class AccountsController : BaseController
     {
         [HttpPost]

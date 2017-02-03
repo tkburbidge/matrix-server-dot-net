@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using Matrix.Client.App_Start;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Matrix.Client
