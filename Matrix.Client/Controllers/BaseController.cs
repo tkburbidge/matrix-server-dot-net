@@ -1,5 +1,4 @@
 ﻿using Matrix.Client.App_Start;
-using Matrix.Client.Models.Base;
 using Matrix.Common;
 using Matrix.Services.DependencyInjection;
 using System.Web.Http;

@@ -26,6 +26,7 @@ namespace Matrix.Common.Errors
         public static MatrixException Forbidden = new MatrixException("M_FORBIDDEN", "The username or password is incorrect", HttpStatusCode.Forbidden);
         public static MatrixException GuestAccountsNotAllowed = new MatrixException("GUEST_ACCOUNTS_NOT_ALLOWED", "Guest accounts are not allowed by this server", HttpStatusCode.BadRequest);
         public static MatrixException UserInUse = new MatrixException("M_USER_IN_USE", "The requested username has already been taken", HttpStatusCode.BadRequest);
+        public static MatrixException InvalidToken = new MatrixException("M_UNKNOWN_TOKEN", "The access token is not valid", HttpStatusCode.BadRequest);
     }
 
         public class MatrixError

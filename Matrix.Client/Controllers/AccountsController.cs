@@ -5,6 +5,7 @@ using Matrix.Services.DependencyInjection;
 using Matrix.Common.Errors;
 using Matrix.Common;
 using System.Net;
+using Matrix.Common.Enums;
 
 namespace Matrix.Client.Controllers
 {
@@ -41,17 +42,18 @@ namespace Matrix.Client.Controllers
         [Route("login")]
         public LoginResponse Login(LoginRequest model)
         {
-            if(model.Type != "m.login.password")
+            if (model.Type != "m.login.password")
             {
                 throw new MatrixException("M_UNKNOWN", "Bad login type", HttpStatusCode.BadRequest);
             }
 
-            var user = this.serviceFactory.UserService.Login(model.User, model.Password);
+            var accessToken = this.serviceFactory.UserService.Login(model.User, model.Password);
+            this.unitOfWork.Commit();
 
             var response = new LoginResponse()
             {
-                AccessToken = user.UserId.ToString(),
-                UserId = $"@{user.Username}:chat.myresman.com",
+                AccessToken = accessToken.Token,
+                UserId = $"@{accessToken.User.Username}:chat.myresman.com",
                 HomeServer = "chat.myresman.com",
             };
 
@@ -66,6 +68,6 @@ namespace Matrix.Client.Controllers
 
             return response;
         }
-        
+
     }
 }

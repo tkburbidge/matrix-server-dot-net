@@ -21,7 +21,7 @@ namespace Matrix.Services.Concrete
 
         public User RegisterUser(string username, string password)
         {
-            if(this.UsernameIsInUse(username))
+            if (this.UsernameIsInUse(username))
             {
                 throw MatrixException.UserInUse;
             }
@@ -46,7 +46,7 @@ namespace Matrix.Services.Concrete
                     select u).Any();
         }
 
-        public User Login(string usernameOrId, string password)
+        public AccessToken Login(string usernameOrId, string password)
         {
             MatrixId userId = new MatrixId(usernameOrId, "chat.myresman.com");
 
@@ -54,14 +54,48 @@ namespace Matrix.Services.Concrete
                         where u.Username == userId.Username
                         select u).FirstOrDefault();
 
-
             if (user == null ||
                 this.serviceFactory.CryptographyService.CheckPassword(user.PasswordHash, password) == false)
             {
                 throw MatrixException.Forbidden;
             }
+            else
+            {
+                var accessToken = (from at in this.repositoryFactory.AccessTokenRepository.FindAll()
+                                   where at.UserId == user.UserId
+                                   select at).FirstOrDefault();
 
-            return user;
+                if (accessToken == null)
+                {
+                    var accessTokenId = Guid.NewGuid();
+                    accessToken = new AccessToken()
+                    {
+                        AccessTokenId = accessTokenId,
+                        Token = accessTokenId.ToString(),
+                        UserId = user.UserId
+                    };
+
+                    this.repositoryFactory.AccessTokenRepository.Add(accessToken);
+                }
+
+                accessToken.LastUsed = DateTime.UtcNow;
+
+                return accessToken;
+            }
+        }
+
+        public Guid GetUserIdFromAccessToken(string token)
+        {
+            var accessToken = (from at in this.repositoryFactory.AccessTokenRepository.FindAll()
+                               where at.Token == token
+                               select at).FirstOrDefault();
+
+            if (accessToken == null)
+            {
+                throw MatrixException.InvalidToken;
+            }
+
+            return accessToken.UserId;
         }
 
     }

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\EventTypes.cs" />
     <Compile Include="Enums\AccountKind.cs" />
     <Compile Include="Enums\EnumConverter.cs" />
     <Compile Include="Enums\RoomPreset.cs" />

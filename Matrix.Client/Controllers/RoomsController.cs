@@ -22,7 +22,33 @@ namespace Matrix.Client.Controllers
         [Route("createRoom")]
         public CreateRoomResponse CreateRoom(CreateRoomRequest model)
         {
-            this.serviceFactory.RoomService.CreateRoom()
+            var userId = this.serviceFactory.UserService.GetUserIdFromAccessToken(model.AccessToken);
+            var roomId = this.serviceFactory.RoomService.CreateRoom(userId, model.RoomAliasName);
+
+            return new CreateRoomResponse()
+            {
+                RoomId = roomId
+            };
         }
+
+        public SendMessageResponse SendMessage(SendMessageRequest model)
+        {
+            var userId = this.serviceFactory.UserService.GetUserIdFromAccessToken(model.AccessToken);
+            var eventId = this.serviceFactory.RoomService.SendMessage(userId, model.Body, model.RoomId);
+
+            return new SendMessageResponse()
+            {
+                EventId = eventId
+            };
+        }
+
+        public GetMessagesResponse GetMessages(GetMessagesRequest model)
+        {
+            var userId = this.serviceFactory.UserService.GetUserIdFromAccessToken(model.AccessToken);
+            var messages = this.serviceFactory.RoomService.GetMessages(model.RoomId, model.Limit);
+
+            return null;
+        }
+
     }
 }

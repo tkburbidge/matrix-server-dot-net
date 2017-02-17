@@ -57,7 +57,11 @@
     <Compile Include="DependencyInjection\RepositoryFactory.cs" />
     <Compile Include="DependencyInjection\SimpleInjectorRepositoriesInitializer.cs" />
     <Compile Include="Extensions\DbContextExtensions.cs" />
+    <Compile Include="Interfaces\IEventRepository.cs" />
+    <Compile Include="Interfaces\IRoomAliasRepository.cs" />
+    <Compile Include="Interfaces\IRoomRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IAccessTokenRepository.cs" />
     <Compile Include="Interfaces\IUserRepository.cs" />
     <Compile Include="Models\Database\UserIp.cs" />
     <Compile Include="Models\Database\UserFilter.cs" />
@@ -113,7 +117,11 @@
     <Compile Include="Models\Database\AccessToken.cs" />
     <Compile Include="Models\Database\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\EventRepository.cs" />
+    <Compile Include="Repositories\RoomAliasRepository.cs" />
+    <Compile Include="Repositories\RoomRepository.cs" />
     <Compile Include="Repositories\EntityFrameworkRepository.cs" />
+    <Compile Include="Repositories\AccessTokenRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup />

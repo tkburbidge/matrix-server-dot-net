@@ -16,6 +16,10 @@ namespace Matrix.Domain.DependencyInjection
             this.serviceProvider = serviceProvider;
         }
 
+        public IAccessTokenRepository AccessTokenRepository { get { return (IAccessTokenRepository)this.serviceProvider.GetService(typeof(IAccessTokenRepository)); } }
+        public IEventRepository EventRepository { get { return (IEventRepository)this.serviceProvider.GetService(typeof(IEventRepository)); } }
+        public IRoomRepository RoomRepository { get { return (IRoomRepository)this.serviceProvider.GetService(typeof(IRoomRepository)); } }
+        public IRoomAliasRepository RoomAliasRepository { get { return (IRoomAliasRepository)this.serviceProvider.GetService(typeof(IRoomAliasRepository)); } }
         public IUserRepository UserRepository { get { return (IUserRepository)this.serviceProvider.GetService(typeof(IUserRepository)); } }
     }
 }

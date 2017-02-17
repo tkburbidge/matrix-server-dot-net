@@ -17,10 +17,11 @@ namespace Matrix.Client.Models.Rooms
         //public RoomCreationContent CreationContent { get; set; }
         //public List<RoomStateEvent> InitialState { get; set; }
         public string RoomAliasName { get; set; }
+        public string AccessToken { get; set; }
     }
 
     public class CreateRoomResponse
     {
-        public string RoomId { get; set; }
+        public Guid RoomId { get; set; }
     }
 }

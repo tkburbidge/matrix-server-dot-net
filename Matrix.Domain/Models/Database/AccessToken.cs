@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Matrix.Domain.Models.Database
 {
@@ -9,6 +10,9 @@ namespace Matrix.Domain.Models.Database
         public Guid? DeviceId { get; set; }
         public string Token { get; set; }
         public DateTime LastUsed { get; set; }
+
+        [ForeignKey("UserId")]
+        public virtual User User { get; set; }
 
         public AccessToken()
         {

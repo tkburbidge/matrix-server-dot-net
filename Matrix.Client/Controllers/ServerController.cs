@@ -1,4 +1,4 @@
-﻿using Matrix.Client.Models.Base;
+﻿using Matrix.Client.Models.Server;
 using System;
 using System.Collections.Generic;
 using System.Linq;
